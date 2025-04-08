@@ -8,20 +8,18 @@
 #
 
 import random
-number = []
 number_to_guess = random.randint(1, 101)
-lives = 6
+lives = 8
 
 while True:
-    number = number_to_guess
     choice = int(input("Guess the number between 1 and 100"))
-    if choice > number:
+    if choice > number_to_guess:
         print("Too high!")
         lives -= 1
-    elif choice < number:
+    elif choice < number_to_guess:
         print("Too low!")
         lives -= 1
-    elif choice == number:
+    elif choice == number_to_guess:
         print("Congratulations you guessed the number!")
         break
     else:
